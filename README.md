@@ -8,25 +8,41 @@ This is the official implementation of **V-FUSE: Volumetric Depth Map Fusion wit
 
 ## Installation
 ### Conda Environment
-working on it...
+For our environment setup, we use [conda](https://www.anaconda.com/download/). Please install conda and run the following command:
+```bash
+conda create -n vfuse python=3.9
+```
+
+Once created, activate the environment:
+```bash
+conda activate vfuse
+```
 
 ### Python Dependancies
-working on it...
+With the conda environment activated, install the python dependencies:
+```bash
+pip install -r requirements.txt --user
+```
+
+This project uses PyTorch, please install the latest version:
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
 
 ## Data Preparation
 For DTU, we provide the input data used in our experiments from all four MVS methods:
 - [MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/ESNvbUjv3UxBqvcUh2YHEDIBDIlVHDtJ-RxmGvjoJzTmRw?e=S24ML7)
-- [UCSNet]()
-- [NP-CVP-MVSNet]()
-- [GBi-Net]()
+- [UCSNet]() (coming soon...)
+- [NP-CVP-MVSNet]() (coming soon...)
+- [GBi-Net]() (coming soon...)
 
 For the Tanks & Temples intermediate set, we provide data for three of the MVS methods:
-- [UCSNet]()
-- [NP-CVP-MVSNet]()
-- [GBi-Net]()
+- [UCSNet]() (coming soon...)
+- [NP-CVP-MVSNet]() (coming soon...)
+- [GBi-Net]() (coming soon...)
 
 For the Tanks & Temples advanced set, we provide data for one MVS method:
-- [GBi-Net]()
+- [GBi-Net]() (coming soon...)
 
 If you would like to use your own data, please follow the following format (using GBi-Net as example):
 ```
@@ -85,7 +101,7 @@ model: <path-to-pretrained-model>
 eval:
   data_path: <path-to-dtu-evaluation-data>
 ```
-NOTE: The `eval:data_path` is a DTU specific config entry. This provides the path to the [DTU evaluation data]().
+NOTE: The `eval:data_path` is a DTU specific config entry. This provides the path to the [DTU evaluation data]() (coming soon...).
 
 ## Training
 To train our network from scratch, simply run the script:
