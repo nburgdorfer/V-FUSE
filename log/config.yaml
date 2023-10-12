@@ -1,0 +1,59 @@
+data_path: /media/nate/Data/Fusion/dtu/gbinet
+dataset: DTU
+device: cuda:0
+eval:
+  data_path: /media/nate/Data/Evaluation/dtu/eval_data/
+  depth_planes: 8
+  mask_th: 20
+  max_depth: 937
+  max_dist: 0.5
+  min_depth: 425
+  min_dist: 0.0
+  min_point_dist: 0.03
+  num_consistent: 3
+  num_frame: 5
+  pix_th: 0.12
+  prob_th: 0.9
+  resolution: dense
+  run_eval: true
+  scale: 1.0
+fusion:
+  base_channels: 8
+  conf_method: swr
+  in_channels: 3
+  kernel_size: 3
+  out_channels: 1
+  sigmoid_scale: 3.0
+  sup_planes: 1.5
+log_path: ./log
+loss:
+  coverage_weight: 20.0
+  depth_weight: 0.5
+  radius_weight: 0.5
+mode: inference
+model: models/gbinet/gbinet_model.pt
+output_path: /media/nate/Drive1/Results/V-FUSE/dtu/Output_gbinet
+scene_list_path: configs/DTU/scene_lists/
+seed: 43
+swenet:
+  base_channels: 4
+  depth_mode: conf
+  in_channels: 5
+  kernel_size: 3
+  max_radius: 0.5
+  min_radius: 0.005
+  out_channels: 1
+training:
+  base_lr: 0.0003
+  batch_size: 4
+  ckpt_file: ./models/gbinet/gbinet_model.pt
+  ckpt_freq: 1
+  depth_planes: 8
+  epochs: 30
+  gamma: 0.95
+  gradient_clip: 5.0
+  log_freq: 10
+  num_frame: 5
+  num_workers: 12
+  scale: 0.5
+  step_size: 2
