@@ -1,0 +1,63 @@
+dataset: DTU
+data_path: /media/nate/Data/Fusion/dtu/gbinet
+device: cuda:0
+log_path: ./log
+output_path: /media/nate/Drive1/Results/V-FUSE/dtu/Output_gbinet
+model: models/gbinet/gbinet_model.pt
+scene_list_path: configs/DTU/scene_lists/
+seed: 43
+
+eval:
+    data_path: /media/nate/Data/Evaluation/dtu/eval_data/ # DTU specific evaluation data (masks, gt point clouds, ...)
+    depth_planes: 8
+    mask_th: 20
+    max_depth: 937
+    min_depth: 425
+    max_dist: 0.5
+    min_dist: 0.0
+    min_point_dist: 0.03 # use 0.2 (0.03) with sparse (dense) GT point clouds
+    num_consistent: 3
+    num_frame: 5
+    pix_th: 0.12
+    prob_th: 0.90
+    resolution: dense # OPTIONS: [sparse, dense]
+    run_eval: True
+    scale: 1.0
+
+loss:
+    depth_weight: 0.5
+    radius_weight: 0.5
+    coverage_weight: 20.0
+
+fusion:
+    base_channels: 8
+    conf_method: swr # OPTIONS: [nsum, single, pns, pns_swr, swr, pkrn]
+    in_channels: 3
+    out_channels: 1
+    kernel_size: 3
+    sup_planes: 1.5
+    sigmoid_scale: 3.0
+
+swenet:
+    base_channels: 4
+    in_channels: 5
+    depth_mode: conf # OPTIONS: [conf, mean]
+    kernel_size: 3
+    max_radius: 0.5
+    min_radius: 0.005
+    out_channels: 1
+
+training:
+    batch_size: 4
+    ckpt_file: ./models/gbinet/gbinet_model.pt # Model checkpoint file to load if not None (for continued training)
+    ckpt_freq: 1 # frequency at which to save model checkpoints during training (measured in epochs)
+    depth_planes: 8
+    epochs: 30 
+    gradient_clip: 5.0
+    log_freq: 10
+    base_lr: 0.0003
+    step_size: 2 #learning rate decay in epochs
+    gamma: 0.95
+    num_frame: 5
+    num_workers: 12
+    scale: 0.5

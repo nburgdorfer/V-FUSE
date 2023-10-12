@@ -1,0 +1,74 @@
+dataset: TNT
+data_path: /media/nate/Data/Fusion/tnt/intermediate/gbinet
+device: cuda:0
+log_path: ./log
+output_path: /media/nate/Drive1/Results/V-FUSE/tnt/intermediate/Output_gbinet
+model: models/gbinet/V10.0.7.pt
+scene_list_path: configs/TNT/scene_lists/
+seed: 43
+
+
+# Intermediate Set Parameters
+# (not ideal to have select values per scene.... but currently necessary)
+#
+# ###### UCSNET ######
+#	SCENES=(       Family Francis  Horse Lighthouse    M60 Panther Playground  Train)
+#	NUM_CONS_LIST=(     6       7      4          7      6       5          6      6)
+#	PIX_TH_LIST=(     1.7     1.2    1.7        1.2    1.8     2.0        1.2    1.2)
+#	DEPTH_TH_LIST=(0.0020  0.0020 0.0025     0.0025 0.0025  0.0030     0.0025 0.0025)
+#
+#	###### GBi-Net ######
+#	SCENES=(       Family Francis  Horse Lighthouse    M60 Panther Playground  Train)
+#	NUM_CONS_LIST=(     5       7      3          6      6       6          6      5)
+#	PIX_TH_LIST=(    0.40    0.45   0.95       0.55   0.70    0.60       0.60   0.50)
+
+
+eval:
+    depth_planes: 8
+    mask_th: 20
+    max_depth: 6.0
+    min_depth: 0.1
+    num_consistent: 5
+    num_frame: 5
+    pix_th: 0.40
+    prob_th: 0.85
+    run_eval: False
+    scale: 1.0
+
+loss:
+    depth_weight: 0.5
+    radius_weight: 0.5
+    coverage_weight: 20.0
+
+fusion:
+    base_channels: 8
+    conf_method: swr # OPTIONS: [nsum, single, pns, pns_swr, swr, pkrn, ]
+    in_channels: 3
+    out_channels: 1
+    kernel_size: 3
+    sup_planes: 1.5
+    sigmoid_scale: 3.0
+
+swenet:
+    base_channels: 4
+    in_channels: 5
+    depth_mode: conf # OPTIONS: [conf, mean]
+    kernel_size: 3
+    max_radius: 0.5
+    min_radius: 0.005
+    out_channels: 1
+
+training:
+    batch_size: 2
+    ckpt_file: # Model checkpoint file to load if not None
+    ckpt_freq: 1
+    depth_planes: 8
+    epochs: 30 
+    gradient_clip: 5.0
+    log_freq: 10
+    base_lr: 0.0003
+    step_size: 2 #learning rate decay in epochs
+    gamma: 0.95
+    num_frame: 5
+    num_workers: 12
+    scale: 1.0
