@@ -46,47 +46,39 @@ For the Tanks & Temples advanced set, we provide data for one MVS method:
 
 If you would like to use your own data, please follow the following format (using GBi-Net as example):
 ```
-<gbinet>
-  ->Cameras
-    -> <scene000>
-      ->00000000_cam.txt
-      ->00000001_cam.txt
-      ->00000002_cam.txt
-      ->00000003_cam.txt
-      ---
-    -> <scene001>
-    -> <scene002>
-    ---
-  ->Confs
-    -> <scene000>
-      ->00000000_conf.pfm
-      ->00000001_conf.pfm
-      ->00000002_conf.pfm
-      ->00000003_conf.pfm
-      ---
-    -> <scene001>
-    -> <scene002>
-    ---
-  ->Depths
-    -> <scene000>
-      ->00000000_depth.pfm
-      ->00000001_depth.pfm
-      ->00000002_depth.pfm
-      ->00000003_depth.pfm
-      ---
-    -> <scene001>
-    -> <scene002>
-    ---
-  ->Images
-    -> <scene000>
-      ->00000000.png
-      ->00000001.png
-      ->00000002.png
-      ->00000003.png
-      ---
-    -> <scene001>
-    -> <scene002>
-    ---
+|<gbinet>
+|---Cameras
+|------<scene000>
+|---------00000000_cam.txt
+|---------00000001_cam.txt
+|---------00000002_cam.txt
+|---------00000003_cam.txt
+|------<scene001>
+|------<scene002>
+|---Confs
+|------<scene000>
+|---------00000000_conf.pfm
+|---------00000001_conf.pfm
+|---------00000002_conf.pfm
+|---------00000003_conf.pfm
+|------<scene001>
+|------<scene002>
+|---Depths
+|------<scene000>
+|---------00000000_depth.pfm
+|---------00000001_depth.pfm
+|---------00000002_depth.pfm
+|---------00000003_depth.pfm
+|------<scene001>
+|------<scene002>
+|---Images
+|------<scene000>
+|---------00000000.png
+|---------00000001.png
+|---------00000002.png
+|---------00000003.png
+|------<scene001>
+|------<scene002>
 ```
 If you would like to use your own data layout, please feel free to modify the code for the dataset in `src/datasets/<DATASET>.py`. NOTE: The `BaseDataset` class in the `src/dataset/BaseDataset.py` file should not need updating to support new datasets. Only the `build_dataset` function at the top of the file would need updating.
 
