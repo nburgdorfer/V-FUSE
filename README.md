@@ -34,7 +34,7 @@ For DTU, we provide the input data used in our experiments from all four MVS met
 - [MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/ESNvbUjv3UxBqvcUh2YHEDIBDIlVHDtJ-RxmGvjoJzTmRw?e=S24ML7)
 - [UCSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdtU4wyHlvBJuEUJhf3EB0gBAnYV-FBv2zbp1jGdTawXig?e=dTdBpM)
 - [NP-CVP-MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EXUdw8TjMO9HojW95PgUnvcBXQgZMCdrH3gks_2ia562SA?e=QYU3zt)
-- [GBi-Net]() (coming soon...)
+- [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/Ebq5gX5pRyRBuKuCFCR-e6ABwCG2xEGpvKGsbVFrSlawnQ?e=dOqn9q)
 
 For the Tanks & Temples intermediate set, we provide data for three of the MVS methods:
 - [UCSNet]() (coming soon...)
