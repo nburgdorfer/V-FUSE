@@ -32,8 +32,8 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ## Data Preparation
 For DTU, we provide the input data used in our experiments from all four MVS methods:
 - [MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/ESNvbUjv3UxBqvcUh2YHEDIBDIlVHDtJ-RxmGvjoJzTmRw?e=S24ML7)
-- [UCSNet]() (coming soon...)
-- [NP-CVP-MVSNet]() (coming soon...)
+- [UCSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdtU4wyHlvBJuEUJhf3EB0gBAnYV-FBv2zbp1jGdTawXig?e=dTdBpM)
+- [NP-CVP-MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EXUdw8TjMO9HojW95PgUnvcBXQgZMCdrH3gks_2ia562SA?e=QYU3zt)
 - [GBi-Net]() (coming soon...)
 
 For the Tanks & Temples intermediate set, we provide data for three of the MVS methods:
@@ -101,7 +101,7 @@ model: <path-to-pretrained-model>
 eval:
   data_path: <path-to-dtu-evaluation-data>
 ```
-NOTE: The `eval:data_path` is a DTU specific config entry. This provides the path to the [DTU evaluation data]() (coming soon...).
+NOTE: The `eval:data_path` is a DTU specific config entry. This provides the path to the [DTU evaluation data](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EW69VFXgdVxHlfWDZdFGAjwB0OHjXUHOpAHDSAGVskq9yQ?e=qoAcSM).
 
 ## Training
 To train our network from scratch, simply run the script:
