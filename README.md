@@ -37,12 +37,12 @@ For DTU, we provide the input data used in our experiments from all four MVS met
 - [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/Ebq5gX5pRyRBuKuCFCR-e6ABwCG2xEGpvKGsbVFrSlawnQ?e=dOqn9q)
 
 For the Tanks & Temples intermediate set, we provide data for three of the MVS methods:
-- [UCSNet]() (coming soon...)
-- [NP-CVP-MVSNet]() (coming soon...)
-- [GBi-Net]() (coming soon...)
+- [UCSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdggEeshAopMoyEx7nuuOrkBc8-s1J-MpmyZK5YClOFkOg?e=v7NHMp)
+- [NP-CVP-MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EWDqNcjF_dRJpqCuYbegqE0BtpS0pnFJrdCJrBh05kTYyA?e=MQAwLK)
+- [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/ET00teKCZARHtNpppXxx5WYBJ3lTR8Jp_crkIBzpb6iuDg?e=FkECiu)
 
 For the Tanks & Temples advanced set, we provide data for one MVS method:
-- [GBi-Net]() (coming soon...)
+- [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdjkrHXnWIVGmKnEnIj5wWIBnl2wRbiQGcJ0gahj2pr2Mg?e=AJ2jCp)
 
 If you would like to use your own data, please follow the following format (using GBi-Net as example):
 ```
