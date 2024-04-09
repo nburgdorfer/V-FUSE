@@ -32,61 +32,53 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ## Data Preparation
 For DTU, we provide the input data used in our experiments from all four MVS methods:
 - [MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/ESNvbUjv3UxBqvcUh2YHEDIBDIlVHDtJ-RxmGvjoJzTmRw?e=S24ML7)
-- [UCSNet]() (coming soon...)
-- [NP-CVP-MVSNet]() (coming soon...)
-- [GBi-Net]() (coming soon...)
+- [UCSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdtU4wyHlvBJuEUJhf3EB0gBAnYV-FBv2zbp1jGdTawXig?e=dTdBpM)
+- [NP-CVP-MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EXUdw8TjMO9HojW95PgUnvcBXQgZMCdrH3gks_2ia562SA?e=QYU3zt)
+- [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/Ebq5gX5pRyRBuKuCFCR-e6ABwCG2xEGpvKGsbVFrSlawnQ?e=dOqn9q)
 
 For the Tanks & Temples intermediate set, we provide data for three of the MVS methods:
-- [UCSNet]() (coming soon...)
-- [NP-CVP-MVSNet]() (coming soon...)
-- [GBi-Net]() (coming soon...)
+- [UCSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdggEeshAopMoyEx7nuuOrkBc8-s1J-MpmyZK5YClOFkOg?e=v7NHMp)
+- [NP-CVP-MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EWDqNcjF_dRJpqCuYbegqE0BtpS0pnFJrdCJrBh05kTYyA?e=MQAwLK)
+- [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/ET00teKCZARHtNpppXxx5WYBJ3lTR8Jp_crkIBzpb6iuDg?e=FkECiu)
 
 For the Tanks & Temples advanced set, we provide data for one MVS method:
-- [GBi-Net]() (coming soon...)
+- [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdjkrHXnWIVGmKnEnIj5wWIBnl2wRbiQGcJ0gahj2pr2Mg?e=AJ2jCp)
 
 If you would like to use your own data, please follow the following format (using GBi-Net as example):
 ```
-<gbinet>
-  ->Cameras
-    -> <scene000>
-      ->00000000_cam.txt
-      ->00000001_cam.txt
-      ->00000002_cam.txt
-      ->00000003_cam.txt
-      ---
-    -> <scene001>
-    -> <scene002>
-    ---
-  ->Confs
-    -> <scene000>
-      ->00000000_conf.pfm
-      ->00000001_conf.pfm
-      ->00000002_conf.pfm
-      ->00000003_conf.pfm
-      ---
-    -> <scene001>
-    -> <scene002>
-    ---
-  ->Depths
-    -> <scene000>
-      ->00000000_depth.pfm
-      ->00000001_depth.pfm
-      ->00000002_depth.pfm
-      ->00000003_depth.pfm
-      ---
-    -> <scene001>
-    -> <scene002>
-    ---
-  ->Images
-    -> <scene000>
-      ->00000000.png
-      ->00000001.png
-      ->00000002.png
-      ->00000003.png
-      ---
-    -> <scene001>
-    -> <scene002>
-    ---
+|<gbinet>
+|---Cameras
+|------<scene000>
+|---------00000000_cam.txt
+|---------00000001_cam.txt
+|---------00000002_cam.txt
+|---------00000003_cam.txt
+|------<scene001>
+|------<scene002>
+|---Confs
+|------<scene000>
+|---------00000000_conf.pfm
+|---------00000001_conf.pfm
+|---------00000002_conf.pfm
+|---------00000003_conf.pfm
+|------<scene001>
+|------<scene002>
+|---Depths
+|------<scene000>
+|---------00000000_depth.pfm
+|---------00000001_depth.pfm
+|---------00000002_depth.pfm
+|---------00000003_depth.pfm
+|------<scene001>
+|------<scene002>
+|---Images
+|------<scene000>
+|---------00000000.png
+|---------00000001.png
+|---------00000002.png
+|---------00000003.png
+|------<scene001>
+|------<scene002>
 ```
 If you would like to use your own data layout, please feel free to modify the code for the dataset in `src/datasets/<DATASET>.py`. NOTE: The `BaseDataset` class in the `src/dataset/BaseDataset.py` file should not need updating to support new datasets. Only the `build_dataset` function at the top of the file would need updating.
 
@@ -101,7 +93,7 @@ model: <path-to-pretrained-model>
 eval:
   data_path: <path-to-dtu-evaluation-data>
 ```
-NOTE: The `eval:data_path` is a DTU specific config entry. This provides the path to the [DTU evaluation data]() (coming soon...).
+NOTE: The `eval:data_path` is a DTU specific config entry. This provides the path to the [DTU evaluation data](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EW69VFXgdVxHlfWDZdFGAjwB0OHjXUHOpAHDSAGVskq9yQ?e=qoAcSM).
 
 ## Training
 To train our network from scratch, simply run the script:
