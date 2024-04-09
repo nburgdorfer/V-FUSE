@@ -1,17 +1,3 @@
-scan001
-scan004
-scan009
-scan010
-scan011
-scan012
-scan013
-scan015
-scan023
-scan024
-scan029
-scan032
-scan033
-scan034
 scan048
 scan049
 scan062
