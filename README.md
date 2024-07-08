@@ -30,7 +30,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ```
 
 ## Data Preparation
-For DTU, we provide the input data used in our experiments from all four MVS methods:
+<!-- For DTU, we provide the input data used in our experiments from all four MVS methods:
 - [MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/ESNvbUjv3UxBqvcUh2YHEDIBDIlVHDtJ-RxmGvjoJzTmRw?e=S24ML7)
 - [UCSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdtU4wyHlvBJuEUJhf3EB0gBAnYV-FBv2zbp1jGdTawXig?e=dTdBpM)
 - [NP-CVP-MVSNet](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EXUdw8TjMO9HojW95PgUnvcBXQgZMCdrH3gks_2ia562SA?e=QYU3zt)
@@ -42,7 +42,8 @@ For the Tanks & Temples intermediate set, we provide data for three of the MVS m
 - [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/ET00teKCZARHtNpppXxx5WYBJ3lTR8Jp_crkIBzpb6iuDg?e=FkECiu)
 
 For the Tanks & Temples advanced set, we provide data for one MVS method:
-- [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdjkrHXnWIVGmKnEnIj5wWIBnl2wRbiQGcJ0gahj2pr2Mg?e=AJ2jCp)
+- [GBi-Net](https://stevens0-my.sharepoint.com/:u:/g/personal/nburgdor_stevens_edu/EdjkrHXnWIVGmKnEnIj5wWIBnl2wRbiQGcJ0gahj2pr2Mg?e=AJ2jCp) -->
+Data for baseline MVS methods coming soon...
 
 If you would like to use your own data, please follow the following format (using GBi-Net as example):
 ```
@@ -108,7 +109,7 @@ training:
 Please leave this line blank if you do not wish to continue training from some model checkpoint.
 
 ## Inference
-We provide [pretrained models](https://drive.google.com/drive/folders/1mjVN2y5MPlZ72Acb1k2XyzsIdzbKm7qT?usp=sharing) for each baseline MVS method.
+We provide [pretrained models](https://stevens0-my.sharepoint.com/:f:/g/personal/nburgdor_stevens_edu/Eu5Mrp3OmMpNlNSsnrcO3nkBix94yM9JZUhx61BLgQ1m_g?e=EANohY) for each baseline MVS method.
 
 To run inference on DTU/TNT/BlendedMVS, run the script:
 ```bash 
