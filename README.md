@@ -109,7 +109,7 @@ training:
 Please leave this line blank if you do not wish to continue training from some model checkpoint.
 
 ## Inference
-We provide [pretrained models](https://stevens0-my.sharepoint.com/:f:/g/personal/nburgdor_stevens_edu/Eu5Mrp3OmMpNlNSsnrcO3nkBix94yM9JZUhx61BLgQ1m_g?e=EANohY) for each baseline MVS method.
+We provide [pretrained models](https://drive.google.com/drive/folders/1mjVN2y5MPlZ72Acb1k2XyzsIdzbKm7qT?usp=sharing) for each baseline MVS method.
 
 To run inference on DTU/TNT/BlendedMVS, run the script:
 ```bash 
